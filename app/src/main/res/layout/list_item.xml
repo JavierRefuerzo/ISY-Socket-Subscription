@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:textAppearance="?android:textAppearanceMedium"
+        android:textSize="16sp"
         android:textColor="#2B3D4D"
         tools:text="Item Name"/>
 
@@ -23,5 +23,6 @@
         android:fontFamily="sans-serif"
         android:textAppearance="?android:textAppearanceSmall"
         android:textColor="#AEB6BD"
+        android:textSize="12sp"
         tools:text="Other Data"/>
 </LinearLayout>
