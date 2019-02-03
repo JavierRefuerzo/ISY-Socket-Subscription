@@ -10,3 +10,6 @@
 /build
 /captures
 .externalNativeBuild
+#built application files
+*.apk
+/app/example/release
