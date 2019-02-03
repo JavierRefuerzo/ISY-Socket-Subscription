@@ -1,0 +1,72 @@
+<resources>
+    <!-- Text fpr the app name [CHAR LIMIT=30] -->
+    <string name="app_name">ISY Socket Log</string>
+
+
+
+    <!-- Text which describes an exception for unknown uri [CHAR LIMIT=50] -->
+    <string name="unknown_uri">Unknown URI</string>
+    <!-- Text which describes and exception for a URI which is not supported [CHAR LIMIT=50] -->
+    <string name="unsupported_uri">URI not supported for insert</string>
+
+
+    <!-- Text which describes the EditText for the Hub Name [CHAR LIMIT=20] -->
+    <string name="hub_name">Hub Name</string>
+    <!-- Text which describes the Local Network Connection Settings [CHAR LIMIT=20] -->
+    <string name="local_connection_settings">Connection Settings</string>
+    <!-- Text which describes the EditText for the Local IP address [CHAR LIMIT=20] -->
+    <string name="hub_local_ip_address">IP Address</string>
+    <!-- Text which describes the EditText for the Local User Name [CHAR LIMIT=20] -->
+    <string name="hub_local_username">Username</string>
+    <!-- Text which describes the EditText for the Local Password [CHAR LIMIT=20] -->
+    <string name="hub_local_password">Password</string>
+    <!-- Label for setting menu which identifies the  button for testing a hub on the local network [CHAR LIMIT=20] -->
+    <string name="settings_test_hub_on_local_network">Test Hub Communication</string>
+    <!-- Title text for the empty list view [CHAR LIMIT=50] -->
+    <string name="empty_view_title_text">No Data Found</string>
+    <!-- Subtitle text for the empty view that prompts the user to add some data[CHAR LIMIT=50] -->
+    <string name="empty_view_subtitle_text">Get started by clicking the floating icon button</string>
+    <!-- Label for dropdown menu option for (node) action[CHAR LIMIT=20] -->
+    <string name="select_hub">Select Hub</string>
+    <!-- Title for activity when adding a new hub [CHAR LIMIT=20] -->
+    <string name="add_hub">Add Hub</string>
+    <!-- Title for activity when editing an existing hub [CHAR LIMIT=20] -->
+    <string name="edit_hub">Edit Hub</string>
+    <!-- Toast message in editor when current item has failed to be entered [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_failed">Error adding item. \n Be sure all data is entered correctly.</string>
+    <!-- Toast message in editor when new items has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_successful">Saved</string>
+    <!-- Title of dialogue used in unsaved changed dialogue [CHAR LIMIT=20] -->
+    <string name="unsaved_changes_dialog_msg">Unsaved changes</string>
+    <!-- Title of dialogue used when attempting to add data which already exists[CHAR LIMIT=20] -->
+    <string name="duplicate_data_dialog_msg">Duplicate data \n \nThe Alias or Pin entered already exists in the database under a different Alias</string>
+    <!-- Discard button for unsaved changes dialogue [CHAR LIMIT=20] -->
+    <string name="discard">discard</string>
+    <!-- Keep Editing button used to return to the Activity from the Unsaved changes dialogue [CHAR LIMIT=20] -->
+    <string name="keep_editing">keep editing</string>
+    <!--Label for the empty list. Shown when no data was received from a hub-->
+    <string name="no_data_found">No data found. \n Try Refreshing Hub. \n Verify App can connect to hub.</string>
+    <!-- Title for activity when checking a connection [CHAR LIMIT=20] -->
+    <string name="checking_hub_connection">Checking Connection</string>
+    <!-- Text to display in the list when there is no internet connection [CHAR LIMIT=NONE] -->
+    <string name="no_internet">No internet connection detected.</string>
+    <!-- Title for activity when searching for a hub [CHAR LIMIT=20] -->
+    <string name="looking_for_hub">Looking for ISY994i</string>
+    <!-- Label for overflow menu option to get help [CHAR LIMIT=20] -->
+    <string name="help">Help</string>
+    <!-- Label for overflow menu option that deletes entry in a table and delete confirmation dialogue [CHAR LIMIT=20] -->
+    <string name="delete">Delete</string>
+    <!-- Label for editor menu option to save data and leave editor [CHAR LIMIT=20] -->
+    <string name="save">Save</string>
+    <!-- Dialog message to ask the user to confirm deleting the current pet [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">Delete this item?</string>
+    <!-- Dialog message to ask the user to confirm deleting the current pet [CHAR LIMIT=NONE] -->
+    <string name="save_dialog_msg">Hub must be saved before testing connection \n\nSave Hub?</string>
+    <!-- Label delete confirmation dialogue [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
+    <!-- Toast message in editor when current item was successfully deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_successful">Item deleted</string>
+    <!-- Toast message in editor when current item has failed to be deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_failed">Error with deleting item</string>
+
+</resources>

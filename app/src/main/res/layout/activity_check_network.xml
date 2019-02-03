@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_check_network"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_margin"
+    android:paddingLeft="@dimen/activity_margin"
+    android:paddingRight="@dimen/activity_margin"
+    android:paddingTop="@dimen/activity_margin">
+
+
+    <!-- Layout for the spinning wheel indeterminate indicator/Progress bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar_iot_item_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.DeviceDefault.ProgressBar.Large"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/empty_view_iot_items_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:text="@string/no_data_found"
+        android:padding="16dp"
+        android:gravity="center"/>
+
+
+</RelativeLayout>
