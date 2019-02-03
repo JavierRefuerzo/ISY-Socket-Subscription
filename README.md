@@ -7,3 +7,5 @@ The app also includes the following examples
 Password encryption before storing in a database
 Subscribing the the ISY994i
 SQLite Database Setup
+
+https://github.com/JavierRefuerzo/ISY-Socket-Subscription
