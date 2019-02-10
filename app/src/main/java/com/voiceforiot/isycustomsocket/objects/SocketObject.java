@@ -342,15 +342,45 @@ public class SocketObject {
                 }
 
                 Log.v(LOG_TAG, "Closing Socket");
-                mBufferedReaderIn.close();
-                mPrinterWriterOut.close();
-                if (mSSLSocket != null){
-                    mSSLSocket.close();
+                //need to close the input before the output
+                try {
+                    if (mPrinterWriterOut != null) {
+                        mPrinterWriterOut.close();
+                    }
+                }catch (Exception e){
+                    Log.v(LOG_TAG, "Exception: " + e);
+                }finally {
+                    try {
+                        if (mBufferedReaderIn != null) {
+                            mBufferedReaderIn.close();
+                        }
+                    } catch (IOException e) {
+                        Log.v(LOG_TAG, "Exception: " + e);
+                    }finally {
+                        try {
+                            if (mSSLSocket != null) {
+                                mSSLSocket.close();
+                            }
+                        } catch (IOException e) {
+                            Log.v(LOG_TAG, "Exception: " + e);
+                        }finally {
+                            try {
+                                if (mSocket != null) {
+                                    mSocket.close();
+                                }
+                            } catch (IOException e) {
+                                Log.v(LOG_TAG, "Exception: " + e);
+                            }
+                        }
+                    }
+
+
                 }
-                if (mSocket != null){
-                    mSocket.close();
+                if (allLines == null || allLines.isEmpty() ){
+                    mSocketListener.onClose("No Message Available");
+                }else {
+                    mSocketListener.onClose(allLines);
                 }
-                mSocketListener.onClose(allLines);
 
 
 
