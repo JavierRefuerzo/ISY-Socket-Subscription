@@ -83,23 +83,6 @@ public class SocketObject {
     public void closeSocket() throws IOException {
         this.closeBackgroundThread = new Thread(closeSocket);
         this.closeBackgroundThread.start();
-////        if (mPrinterWriterOut != null){
-////            mPrinterWriterOut.print("Unsubscribing from ISY");
-////            mPrinterWriterOut.flush();
-////        }
-//        if (mBufferedReaderIn != null) {
-//            mBufferedReaderIn.close();
-//        }
-//        if (mPrinterWriterOut != null) {
-//            mPrinterWriterOut.close();
-//        }
-//        if (mSSLSocket != null){
-//            mSSLSocket.close();
-//        }
-//        if (mSocket != null){
-//            mSocket.close();
-//        }
-//        mSocketListener.onClose("");
     }
 
     private Thread closeBackgroundThread;
@@ -112,31 +95,39 @@ public class SocketObject {
                 mPrinterWriterOut.print("Unsubscribing from ISY");
                 mPrinterWriterOut.flush();
             }
-            if (mBufferedReaderIn != null){
-                try {
-                    mBufferedReaderIn.close();
-                }catch (IOException e){
 
+            //need to close the input before the output
+            try {
+                if (mPrinterWriterOut != null) {
+                    mPrinterWriterOut.close();
+                }
+            }catch (Exception e){
+                Log.v(LOG_TAG, "Exception: " + e);
+            }finally {
+                try {
+                    if (mBufferedReaderIn != null) {
+                        mBufferedReaderIn.close();
+                    }
+                } catch (IOException e) {
+                    Log.v(LOG_TAG, "Exception: " + e);
+                }finally {
+                    try {
+                        if (mSSLSocket != null) {
+                            mSSLSocket.close();
+                        }
+                    } catch (IOException e) {
+                        Log.v(LOG_TAG, "Exception: " + e);
+                    }finally {
+                        try {
+                            if (mSocket != null) {
+                                mSocket.close();
+                            }
+                        } catch (IOException e) {
+                            Log.v(LOG_TAG, "Exception: " + e);
+                        }
+                    }
                 }
             }
-            if (mPrinterWriterOut != null){
-                mPrinterWriterOut.close();
-            }
-            if (mSSLSocket != null){
-                try {
-                    mSSLSocket.close();
-                }catch (IOException e){
-
-                }
-            }
-            if (mSocket != null){
-                try {
-                    mSocket.close();
-                }catch (IOException e){
-
-                }
-            }
-            mSocketListener.onClose("This Application Closed Socket");
         }
 
     };

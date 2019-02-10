@@ -40,10 +40,8 @@ import android.widget.Toast;
 
 import com.voiceforiot.isycustomsocket.R;
 import com.voiceforiot.isycustomsocket.adapters.TwoItemCursorAdapter;
-import com.voiceforiot.isycustomsocket.constants.UriValues;
 import com.voiceforiot.isycustomsocket.data.DatabaseContract;
-import com.voiceforiot.isycustomsocket.interfaces.SocketListener;
-import com.voiceforiot.isycustomsocket.objects.SocketObject;
+
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
